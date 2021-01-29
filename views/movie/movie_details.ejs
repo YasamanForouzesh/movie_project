@@ -1,0 +1,16 @@
+<h2 name="Title"><%= data.Title %> </h2>
+<img src="<%= data.Poster %> " alt="<%= data.Title %> ">
+<h5>Year: <%= data.Year %> </h5>
+<h5>Genre: <%= data.Genre %> </h5>
+<h5>Director: <%= data.Director %> </h5>
+<h5>Writer: <%= data.Writer %> </h5>
+<h5>Actors: <%= data.Actors %> </h5>
+<h5>Language: <%= data.Language %> </h5>
+<h5>Country: <%= data.Country %> </h5>
+<h5>Type: <%= data.Type %> </h5>
+<h5>Language: <%= data.Language %> </h5>
+<form action="/movies/fave/<%= data.imdbID%>/<%=  data.Title%>/<%= data.Rated %>  " method="POST">
+    <input type="hidden" name="url" id="url" value="<%= data.Poster %>" >
+    <input type="submit" value="add to my favorites">
+</form>
+

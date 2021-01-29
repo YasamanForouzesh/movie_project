@@ -1,0 +1,16 @@
+
+<nav>
+    <ul>
+        <% if (!currentUser) { %>
+        <li><a href="/profile/signup">Signup</a></li>
+        <li><a href="/profile/login">Login</a></li>
+        <li>  <a href="/profile/delete">Delete account</a></li>
+        <% } else { %>
+        <li><a href="/profile/logout">Logout</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li>  <a href="/profile/delete">Delete account</a></li>
+        <li>  <a href="/profile/club">club</a></li>
+        <li>  <a href="/profile/myFave">My Fave</a></li>
+        <% } %>
+    </ul>
+    </nav>

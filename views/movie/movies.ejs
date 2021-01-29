@@ -1,0 +1,9 @@
+<ul>
+    <% data.forEach(movie=>{%>
+  
+        <% if(movie.Poster!='N/A'){%>
+           
+            <a href="/movies/<%= movie.imdbID  %> "><img src="<%= movie.Poster %> " alt="<%= movie.Title %> "></a>
+       <% } %>
+    <%}) %>     
+</ul>

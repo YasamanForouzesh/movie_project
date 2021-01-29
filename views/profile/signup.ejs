@@ -1,0 +1,47 @@
+<h2>Sign Up</h2>
+<% if(message.length>0) {%>
+  
+
+      <div class="alert alert-warning" role="alert">
+          <%= message  %> 
+
+
+<%}%> 
+<form action="/profile/signup" method="POST">
+  <div class="form-group row">
+    <label for="fullname" class="col-2 col-form-label">Full Name:</label>
+    <div class="col-10">
+      <input class="form-control" type="text"  id="fullname" name="fullname">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="username" class="col-2 col-form-label">User Name:</label>
+    <div class="col-10">
+      <input class="form-control" type="text"  id="username" name="username">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="email" class="col-2 col-form-label">Email:</label>
+    <div class="col-10">
+      <input class="form-control" type="email"  placeholder="email@example.com" id="email" name="email">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="password" class="col-2 col-form-label">Password:</label>
+    <div class="col-10">
+      <input class="form-control" type="password"  id="password" name="password">
+  </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-date-input" class="col-2 col-form-label">Date Of Birth</label>
+    <div class="col-10">
+      <input class="form-control" type="date" placeholder="2011-08-19" id="example-date-input" name="dob">
+    </div>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary">Sign Up</button>
+
+
+
+
+</form>

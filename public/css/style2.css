@@ -1,0 +1,12 @@
+img{
+    border-radius: 50%;
+    width:90px;
+}
+#edit{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}

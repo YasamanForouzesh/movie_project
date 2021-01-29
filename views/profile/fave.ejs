@@ -1,0 +1,20 @@
+<form action="/movies" method="GET">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" name="SearchText" id="movie" placeholder="enter your movie name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <span class="input-group-text" id="basic-addon2"> <input type="submit" name="submit" id="submit" value="search"></span>
+        <link rel="stylesheet" href="/css/style2.css">
+      </div>
+   
+</form>
+
+    <ul>
+        <% movies.forEach(movie=>{%>
+            <form action="/movies/delete/<%= movie.id %>/?_method=DELETE" method="POST">
+            <div class="input-group mb-3">
+                <img src="<%= movie.url%> " alt="" class="imgFave"> 
+                <h5 class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" > <%= movie.title %></h5>
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Delete</button>
+              </div>
+            </form>
+        <%}) %> 
+    </ul>

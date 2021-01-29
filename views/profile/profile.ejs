@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style2.css">
+</head>
+<body>
+    <img src="/img/img_avatar2.png" id="personal" alt="">
+    <h6><%=currentUser.username%></h6>
+    <h9><%=currentUser.description%></h9>
+    <span>   
+    </span>
+    <br>
+    <h9>your age <%= age  %> </h9>
+    <form action="/profile/update">
+        <button type="submit" id="edit">Edit</button>
+    </form> 
+
+    
+    <ul>
+        <% movies.forEach(movie=>{%>
+            <form action="/movies/comment/<%= movie.id %>" method="POST">
+                <div>
+                    <img src="<%= movie.url%> " alt="" class="imgFave"> 
+
+                    <h5><%= movie.title%> </h5>
+                        <ul>
+
+                            <% info.forEach(com=>{%>
+                                <% if(com.movieId==movie.id){%>
+                                    <li><%= com.comment %> </li>
+                                <%} %> 
+                              
+                            <%}) %> 
+                        </ul>
+
+
+                    <input type="text" name="comment" placeholder="please enter your comment">
+                    <input type="submit">
+                </div>
+            </form>
+        <%}) %> 
+    </ul>
+
+</body>
+</html>
