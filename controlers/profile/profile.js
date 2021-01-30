@@ -50,29 +50,31 @@ module.exports.showProfile=(req,res)=>{
 
     req.user.getMovies()
     .then(movies=>{
-        if(movies.length>0){
+        res.render('profile/profile.ejs',{age:diff,movies:movies,info})
 
-            console.log(movies)
-             movies.forEach(movie=>{
-                movie.getComments()
-                .then(comments=>{            
-                    comments.forEach(com=>{
-                        info.push({
-                            movieId:com.movieId,
-                            comment:com.comment
-                        })
-                    })
-                    console.log("💕")
-                    console.log(info)
+        // if(movies.length>0){
+
+        //     console.log(movies)
+        //      movies.forEach(movie=>{
+        //         movie.getComments()
+        //         .then(comments=>{            
+        //             comments.forEach(com=>{
+        //                 info.push({
+        //                     movieId:com.movieId,
+        //                     comment:com.comment
+        //                 })
+        //             })
+        //             console.log("💕")
+        //             console.log(info)
                     
-                    res.render('profile/profile.ejs',{age:diff,movies:movies,info})
-                })
-            })
+        //             res.render('profile/profile.ejs',{age:diff,movies:movies,info})
+        //         })
+        //     })
             
-        }else{
+        // }else{
 
-            res.render('profile/profile.ejs',{age:diff,movies:movies,info})
-        }
+        //     res.render('profile/profile.ejs',{age:diff,movies:movies,info})
+        // }
 
     })
     
